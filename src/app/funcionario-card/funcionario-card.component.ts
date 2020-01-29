@@ -16,6 +16,10 @@ export class FuncionarioCardComponent {
   // tslint:disable-next-line: no-input-rename
   @Input('obj') funcionario: any;
 
+  isAdmin() {
+    return this.funcionario.nome.startsWith('E');
+  }
+
   getEstilosCartao() {
     return {
       'border-width.px': this.funcionario.id,
